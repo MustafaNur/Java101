@@ -2,13 +2,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*
-        +değişkenleri tanımla
-        +kullanıcıdan 2 sayı al
-        kullanıcıdan yapmasını istediğin seçimi iste
-        işlemi yaptır
-        yapılan işlemi ekrana yazdır
-         */
         int n1, n2, select, output;
 
         Scanner input = new Scanner(System.in);
@@ -51,8 +44,12 @@ public class Main {
                     System.out.print("= " + output);
                     break;
                 case 4:
-                    output = n1 / n2;
-                    System.out.print("= " + output);
+                    if (n2 == 0) {
+	                 System.out.print("Sıfıra bölünemez");
+                    }else{
+                        output = n1 / n2;
+                        System.out.print("= " + output);
+                    }
                     break;
             }
 
